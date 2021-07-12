@@ -1,1 +1,2 @@
 # algorithm
+some general algorithm
