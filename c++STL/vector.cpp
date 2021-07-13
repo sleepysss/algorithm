@@ -15,6 +15,7 @@ int main()
 	vector<int> v3; //an empty vector 
 	vector<int> v4(array, array + 5); //declare by array based, interval:[) in this example v4 will have 1,2,3,4,5
 	vector<int> v5 = { 9,8,7,6,5 };
+	vector<vector<int>> array_2D(3,v5); //an 2D array with  3 row and each row has the same value with v5
 	vector<int>::iterator it; //an  iterator
 
 	//iterator
