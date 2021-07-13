@@ -1,2 +1,2 @@
 # algorithm
-some general algorithm
+some general algorithm with c++
