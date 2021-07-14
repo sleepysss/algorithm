@@ -38,7 +38,10 @@ int main()
 	v1.erase(v1.begin()); //delete a single value at specific position
 	v1.erase(v1.begin(), v1.begin() + 3); //delete a range,interval{)
 	v1.clear(); //delete all
-
+	
+	//operator = == != < > <= >=
+	v1==v2; //v1 equals v2
+	
 	//get the range/size ....
 	v1.empty(); //see if the vector is empty (empty->true)
 	v1.size(); //vector have how many elements
