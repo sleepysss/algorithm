@@ -24,6 +24,10 @@ int main()
 	//get the range/size...
 	m1.size(); //how many elements in the map
 	m1.empty(); //empty->true
+	
+	//find
+	auto search = m1.find("BLACK"); //find->return first find element position(can use search->first,search->second to show);not find->return m1.end()
+
 
 	////operator = == != 
 
