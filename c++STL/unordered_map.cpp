@@ -15,7 +15,7 @@ int main()
 	//add or remove element
 	m1["BLUE"] = 30; //add
 	m1.erase(m1.begin()); //remove by position
-	m1.erase("BLUE");
+	m1.erase("BLUE"); //remove by key
 	m1.clear();
 
 	//traversal
