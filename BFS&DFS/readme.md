@@ -1,5 +1,5 @@
 DFS 就像試探著走迷宮，從起點開始、任意選一點與起點相鄰的點行走，行走過的點會被標記起來；再將下一個點視為起點、繼續選擇與該點相鄰的點行走… 直到發現所有的點都已被標記過，即相鄰此點的所有點都已經走過了，則退回上一個分叉路口，繼續探訪。直到所有的點都被標記過了，則搜索完畢。
 
 BFS 以某個頂點作為起始點，一開始拜訪該頂點、再接著拜訪該頂點的所有相鄰頂點，接下來再拜訪下一層的頂點，直到所有的頂點皆拜訪過為止。
-![image](pictures/1_INwehwNaWrUmOvq_a5wMWg.gif)
+\![image](https://github.com/sleepysss/algorithm/blob/main/pictures/1_INwehwNaWrUmOvq_a5wMWg.gif)\
 (･ω´･ )  
