@@ -3,7 +3,7 @@
 using namespace std;
 #define MAX 999
 
-//首先以某一vertex為出發點,再與其相連且尚未被選取的vertex裡,選擇加入離出發點距離最近的vertex,並且透過新增的vertex更新到達其他vertex的距離,重複這步驟,直到所有vertex都被加入
+//首先以某一vertex為出發點,在尚未被選取的vertex裡,選擇加入離出發點距離最近的vertex,並且透過新增的vertex更新到達其他vertex的距離,重複這步驟,直到所有vertex都被加入
 
 int G[6][6] = { {MAX,1,12,MAX,MAX,MAX},{MAX,MAX,9,3,MAX,MAX},{MAX,MAX,MAX,MAX,5,MAX},{MAX,MAX,4,MAX,13,15},{MAX,MAX,MAX,MAX,MAX,4},{MAX,MAX,MAX,MAX,MAX,MAX} };
 int Distance[6] = { 0 ,1 ,12 ,MAX ,MAX ,MAX }; //distance from start to other vertex
