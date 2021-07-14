@@ -4,6 +4,9 @@ using namespace std;
 #define MAX 999
 
 //首先以某一vertex為出發點,在尚未被選取的vertex裡,選擇加入離出發點距離最近的vertex,並且透過新增的vertex更新到達其他vertex的距離,重複這步驟,直到所有vertex都被加入
+//任兩點之間的最短路徑有兩種情況：1.此兩點之間有邊相連，是相鄰的兩點(列出所有的邊就可得到答案) 2.此兩點會經過其它點，產生最短路徑(需要先找出指定點與
+//另一點的最短路徑，畢竟只有最短路徑才能讓另一個路徑也是最短的)
+
 
 int G[6][6] = { {MAX,1,12,MAX,MAX,MAX},{MAX,MAX,9,3,MAX,MAX},{MAX,MAX,MAX,MAX,5,MAX},{MAX,MAX,4,MAX,13,15},{MAX,MAX,MAX,MAX,MAX,4},{MAX,MAX,MAX,MAX,MAX,MAX} };
 int Distance[6] = { 0 ,MAX ,MAX ,MAX ,MAX ,MAX }; //distance from start to other vertex //we dont know the distance at the begining
