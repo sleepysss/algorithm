@@ -50,8 +50,8 @@ void Prim(int start_vertex)
 		for (int i = 0; i < 7; ++i) //update the Distance
 		{
 			if (G[smallest_vertex][i] < Distance[i] && !visited[i])  //see if by adding smallest_vertex to justice legend,distance from legend to vertex i will be shorter or not
-				Distance[i] = G[smallest_vertex][i];                         //we dont need to walk through all the legend member because new adding vertex(smallest_vertex) will only have effect on its neighbor 
-		}                                                                                         //vertex !
+				Distance[i] = G[smallest_vertex][i];             //we dont need to walk through all the legend member because new adding vertex(smallest_vertex) will only have effect on its neighbor 
+		}                                                                //vertex !
 	}
 }
 
