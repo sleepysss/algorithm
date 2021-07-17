@@ -3,7 +3,7 @@
 using namespace std;
 
 //在數列中挑選一個數,稱為pivot,然後調整數列(using Partition()),使得"所有在pivot左邊的數都比pivot還小,所有在pivot右邊的數,
-//都比pivot還大,這時原數列會分成3塊,<pivot,pivot,>pivot,pivot固定住了(已排完),將<pivot和>pivot的數列視為新的
+//都比pivot還大,這時原數列會分成3塊,<pivot pivot >pivot,而pivot固定住了(已排完),將<pivot和>pivot的數列視為新的
 //數列,重複前面的步驟,直到分不出新的數列為止
 
 int Partition(int nums[],int front_index, int end_index)
@@ -29,7 +29,7 @@ int Partition(int nums[],int front_index, int end_index)
 
 void quicksort(int nums[],int front_index,int end_index)
 {
-	if (front_index < end_index)
+	if (front_index < end_index) //數列有>1個數才要排
 	{
 		int pivot_index=Partition(nums,front_index,end_index);
 		quicksort(nums, pivot_index + 1, end_index);
