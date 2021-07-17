@@ -15,8 +15,8 @@ void combination(int n, int k,vector<int> store,int start)
 	}
 
 	for (int i = start; i <= n; ++i)       //not from 1 because it is combination(in combination,1,2 and 2,1 are same),needs "special method":
-	{                                                   //Take the number from left to right, and don’t repeat it for those who have been taken
-		                                                //we can let i start from 1 and select the candidate  also
+	{                                      //Take the number from left to right, and don’t repeat it for those who have been taken
+		                               //we can let i start from 1 and select the candidate  also
 		if ((store.size()+n-i+1)>=k)  //cant full store array(does not have enough candidate,we need k candidate)
 		{
 			store.push_back(i);  //add
