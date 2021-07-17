@@ -21,6 +21,7 @@ int Partition(int nums[],int front_index, int end_index)
 			nums[smaller_than_pivot_num_last_index] = temp;
 		}
 	}
+	
 	temp = pivot;     //change pivot place from <pivot >pivot pivot to  <pivot pivot >pivot
 	nums[end_index]=nums[++smaller_than_pivot_num_last_index];
 	nums[smaller_than_pivot_num_last_index] = temp;
@@ -29,7 +30,7 @@ int Partition(int nums[],int front_index, int end_index)
 
 void quicksort(int nums[],int front_index,int end_index)
 {
-	if (front_index < end_index) //數列有>1個數才要排
+	if (front_index < end_index) //數列有>1個數且"合理"才需排
 	{
 		int pivot_index=Partition(nums,front_index,end_index);
 		quicksort(nums, pivot_index + 1, end_index);
