@@ -1,0 +1,14 @@
+Interleaving String
+
+題目:判斷是否s1與s2可以交錯形成s3
+ex:
+Input: s1 = "aabcc", s2 = "dbbca", s3 = "aadbbcbcac"
+Output: true
+
+想法:定義出一個二維的DP array，其中DP[i][j]代表當前s1[0: i-1]與s2[0: j-1]是否能組成s3[0: i+j-1](ex:dp[1][1]代表s1的第一個字元和s2的第1個字元是否能拚出s3的前兩個字元),可以觀察s3的最後一個字元：它可能來自 s1、也可能來自 s2。所以會有兩種case:
+     1.s1[i-1] == s3[i+j-1] : 這個代表我們可以取出s1當前的元素來形成s3的下一個元素，所以這時候我們的transfer formula就會變成:dp[i][j] = dp[i-1][j],代表去問問看用少當前最後一個字元的s1和當前完整的s2可否拼出少當前最後一個字元的s3(s1,s2,s3的range看的是"當前")
+     2.s2[j-1] == s3[i+j-1]: 這個代表我們可以取出s2當前的元素來形成s3的下一個元素，所以這時候我們的transfer formula就會變成:dp[i][j] = dp[i][j-1]
+     最後再對這兩個case的結果做or
+     
+     *初始條件:dp[0][0]代表s1,s2皆空,若給的s3也為空,則為True
+               dp[i][0]代表s2為空,若s3和s1的長度一樣,則為True,dp[o][j]同理
