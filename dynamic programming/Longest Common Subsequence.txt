@@ -1,0 +1,11 @@
+Longest Common Subsequence
+
+題目:給定兩個字串 text1 以及 text2。請你找出他們最長共同部份子序列的長度。
+ex:
+Input: text1 = "abcde", text2 = "ace" 
+Output: 3  
+Explanation: The longest common subsequence is "ace" and its length is 3.
+
+想法:考慮兩個字串的最後一個字元,如果這兩個字元相同，那麼一種可能的答案就是兩邊同時去掉最後一個字元時的最長共同部份子序列、加上這個字元。如果最佳解不同時包含兩字串的最後一個字元，那麼它總來自於去掉 text1 的最後一個字元、或去掉 text2 的最後一個字元以後，兩個字串的最長共同部份子序列的長度。
+
+     可用一個array LCS[i][j]來表示「 s1 前 i 個元素」和「 s2 前 j 個元素」的 LCS 長度。並在i,j為0時初始化LCS為0(因為和空的字串算LCS一定是0),而由上述,LCS[i][j]會由LCS[i-1][j-1]+1(if最後一個字母相等),LCS[i-1][j],LCS[i][j-1](這兩個看哪個結果較大)組合而成
