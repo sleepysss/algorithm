@@ -6,7 +6,7 @@
 
 解法分為兩種:
 
-1.top-down:遞迴＋記憶化搜索 (define a state->instead of starting from the base state , we ask our answer from the states that can reach the destination state)
+1.top-down:遞迴＋記憶化搜索 (define a state->instead of starting from the base state , we ask our answer from the states that can reach the destination state)。好處:一是只需要關心遞迴的部份、不需要擔心計算順序，二來只需要計算真正需要計算的狀態，有些狀態不需要去計算它。
 
 2.bottom-up:填表法(define a state-> starts its transition from the bottom-most base case dp[0] and reaches its destination state dp[n]) 
 
