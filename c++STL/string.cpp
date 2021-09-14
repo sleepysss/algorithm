@@ -39,7 +39,9 @@ int main()
 	str1.compare(str2); //same->0,difference->1
 
 	//type in
-	getline(cin, str4); //can have space
+	//cin will stop when there is enter or space
+	getline(cin, str4); //can have space ! can continue typing
+	(cin>>store).get(); //if continue typing,we can use this method to ignore enter
 
 	system("pause");
 	return 0;
