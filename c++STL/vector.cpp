@@ -27,7 +27,7 @@ int main()
 	//  共有5種iterator:
 	//  (1)输入迭代器(Input Iterator):只能向前单步迭代元素，不允许修改由该迭代器所引用的元素
 	//  (2)输出迭代器(Output Iterator):只能向前单步迭代元素，对由该迭代器所引用的元素只有写权限
-	//  (3)向前迭代器(Forward Iterator):该迭代器可以在一个区间中进行读写操作，它拥有输入迭代器的所有特性和输出迭代器的部分特性，以及向前单步迭代元素的能力
+	//  (3)向前迭代器(Forward Iterator):该迭代器可以在一个区间中进行读写操作，它拥有输入迭代器的所有特性和输出迭代器的部分特性，以及向前单步迭代元素的能力(只能++或--)
 	//  (4)双向迭代器(Bidirectional Iterator):在向前迭代器的基础上增加了向后单步迭代元素的能力
 	//  (5)随机访问迭代器(Random Access Iterator):不仅综合以后4种迭代器的所有功能，还可以像指针那样进行算术计算
 	//
@@ -40,9 +40,9 @@ int main()
 	//  iterator的相等:The two iterators are equal only when both the iterators point to the same position.
 	//  list提供的是双向迭代器,所以list<int>::iterator iter和list<int>::reverse_iterator iter為bidirectional的(reverse bidirectional iterator)
 	//  而雙向迭代器不支援 
-	p1[i](不能通过下标访问 list 容器中指定位置处的元素)
-	p1-=i ,p1+i(不支持使用 -=、+=、+、- 运算符,只能作平移一格的動作)
-	不支持使用 <、 >、 <=、 >= 比较运算符
+	//  (1)p1[i](不能通过下标访问 list 容器中指定位置处的元素)
+	//  (2)p1-=i ,p1+i(不支持使用 -=、+=、+、- 运算符,只能作平移一格的動作)
+	//  (3)不支持使用 <、 >、 <=、 >= 比较运算符
 	*/
 
 	//list的iterator的例子
