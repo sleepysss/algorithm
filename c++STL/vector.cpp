@@ -17,6 +17,27 @@ int main()
 	vector<int> v5 = { 9,8,7,6,5 };
 	vector<vector<int>> array_2D(3,v5); //an 2D array with  3 row and each row has the same value with v5
 	vector<int>::iterator it; //an  iterator
+	
+	/*  iterator
+	//  迭代器(iterator)是一中检查容器内元素并遍历元素的数据类型。
+	//  使用方法和pointer一樣,通过迭代器可以指向容器中的某个元素，如果需要，还可以对该元素进行读/写操作。
+	//  每种容器类型都定义了自己的迭代器类型
+	//  list<int>::iterator iter;这条语句定义了一个名为iter的变量，它的数据类型是由list<int>定义的iterator类型。
+	//  const_iterator只能只能對容器中資料進行「讀取」的動作，而無法存入或更改其值。
+	//  共有5種iterator:
+	//  (1)输入迭代器(Input Iterator):只能向前单步迭代元素，不允许修改由该迭代器所引用的元素
+	//  (2)输出迭代器(Output Iterator):只能向前单步迭代元素，对由该迭代器所引用的元素只有写权限
+	//  (3)向前迭代器(Forward Iterator):该迭代器可以在一个区间中进行读写操作，它拥有输入迭代器的所有特性和输出迭代器的部分特性，以及向前单步迭代元素的能力
+	//  (4)双向迭代器(Bidirectional Iterator):在向前迭代器的基础上增加了向后单步迭代元素的能力
+	//  (5)随机访问迭代器(Random Access Iterator):不仅综合以后4种迭代器的所有功能，还可以像指针那样进行算术计算
+	//  定義方式:
+	//  正向迭代器             容器类名::iterator  迭代器名;
+	//  常量正向迭代器          容器类名::const_iterator  迭代器名;	
+	//  反向迭代器             容器类名::reverse_iterator  迭代器名;
+	//  常量反向迭代器          容器类名::const_reverse_iterator  迭代器名;
+	
+	//  list提供的是双向迭代器
+	*/
 
 	//iterator
 	it = v1.begin(); //a place of vector first element
