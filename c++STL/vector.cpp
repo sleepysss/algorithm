@@ -32,10 +32,10 @@ int main()
 	//  (5)随机访问迭代器(Random Access Iterator):不仅综合以后4种迭代器的所有功能，还可以像指针那样进行算术计算
 	//
 	//  定義方式:
-	//  (該容器提供的)迭代器     容器类名::iterator  迭代器名;
-	//  常量正向迭代器           容器类名::const_iterator  迭代器名;	
-	//  反向迭代器              容器类名::reverse_iterator  迭代器名;
-	//  常量反向迭代器           容器类名::const_reverse_iterator  迭代器名;
+	//  (該容器提供的)正向迭代器               容器类名::iterator  迭代器名;
+	//  常量正向迭代器                        容器类名::const_iterator  迭代器名;	
+	//  (該容器提供的)反向迭代器               容器类名::reverse_iterator  迭代器名;
+	//  常量反向迭代器                        容器类名::const_reverse_iterator  迭代器名;
 	//	
 	//  iterator的相等:The two iterators are equal only when both the iterators point to the same position.
 	//  list提供的是双向迭代器,所以list<int>::iterator iter為bidirectional的
