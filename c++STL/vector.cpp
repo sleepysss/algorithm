@@ -58,14 +58,14 @@ int main()
 	//add or remove element
 	v2.push_back(1); //add an element at the vector end
 	v2.pop_back();//delete an element at the vector end
-	v2.insert(v2.begin(), 999); //add an(some) elements at the specific position,position needs to be a iterator (in this example add 999 at the begining of v2) 
+	v2.insert(v2.begin(), 999); //add an(some) elements before the specific position,position needs to be a iterator (in this example add 999 at the begining of v2) 
 	it = v1.begin();
-	v1.insert(it, 5, 66); //add 5 66 to the begining of v1 
-	v1.insert(v1.begin() + 1, v2.begin(), v2.end()); //add vector or array to another arrray interval{)
+	v1.insert(it, 5, 66); //add 5 個 66 to the begining of v1 (填入多個相同數字)
+	v1.insert(v1.begin() + 1, v2.begin(), v2.end()); //將另一獨立的vector或陣列插入舊有的vector
 	v1.insert(v1.begin(), { 30,40,50,60 }); //insert multiple element
 	v1.erase(v1.begin()); //delete a single value at specific position
 	v1.erase(v1.begin(), v1.begin() + 3); //delete a range,interval{)
-	v1.clear(); //delete all
+	v1.clear(); //delete all element in list
 	
 	//operator = == != < > <= >=
 	v1==v2; //v1 equals v2
