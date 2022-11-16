@@ -11,7 +11,7 @@ int main()
 
 	//declare new vector
 	vector<int> v1(3,5);  //3 element ,each element value equals 5
-	vector<int> v2(4); //4 element,each element valuse equals 0
+	vector<int> v2(4); //4 element,each element value equals 0
 	vector<int> v3; //an empty vector 
 	vector<int> v4(array, array + 5); //declare by array based, interval:[) in this example v4 will have 1,2,3,4,5
 	vector<int> v5 = { 9,8,7,6,5 };
