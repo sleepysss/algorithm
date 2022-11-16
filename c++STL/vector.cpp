@@ -38,8 +38,11 @@ int main()
 	//  常量反向迭代器                        容器类名::const_reverse_iterator  迭代器名;
 	//	
 	//  iterator的相等:The two iterators are equal only when both the iterators point to the same position.
-	//  list提供的是双向迭代器,所以list<int>::iterator iter為bidirectional的
-	//  而雙向迭代器不支援 p1[i](不能通过下标访问 list 容器中指定位置处的元素), p1-=i ,p1+i(不支持使用 -=、+=、+、- 运算符), 不支持使用 <、 >、 <=、 >= 比较运算符
+	//  list提供的是双向迭代器,所以list<int>::iterator iter和list<int>::reverse_iterator iter為bidirectional的(reverse bidirectional iterator)
+	//  而雙向迭代器不支援 
+	p1[i](不能通过下标访问 list 容器中指定位置处的元素)
+	p1-=i ,p1+i(不支持使用 -=、+=、+、- 运算符,只能作平移一格的動作)
+	不支持使用 <、 >、 <=、 >= 比较运算符
 	*/
 
 	//list的iterator的例子
