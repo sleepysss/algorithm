@@ -39,20 +39,26 @@ int main()
 	//	
 	//  iterator的相等:The two iterators are equal only when both the iterators point to the same position.
 	//  list提供的是双向迭代器,所以list<int>::iterator iter為bidirectional的
+	//  而雙向迭代器不支援 p1[i](不能通过下标访问 list 容器中指定位置处的元素), p1-=i ,p1+i(不支持使用 -=、+=、+、- 运算符), 不支持使用 <、 >、 <=、 >= 比较运算符
 	*/
 
-	//iterator的例子
-	it = v1.begin(); //v1.begin()為指向首端之 iterator
+	//list的iterator的例子
+	it = v1.begin(); //v1.begin()返回指向容器中第一个元素的双向迭代器（正向迭代器）
 	it = v1.end();//指向尾端的下一個位置的iterator
+	v1.rbegin(); //Returns a reverse iterator pointing to the last element in the container
+	v1.rend(); //返回指向第一个元素所在位置前一个位置的反向双向迭代器
+	v1.cbegin() //和 begin() 功能相同，只不过在其基础上，正向迭代器增加了 const 属性，即不能用于修改元素。
+	
 	//get the element
 	v1[0]; //just like array
 	v1.front(); //first element 
 	v1.back(); //last element
+	
 
 	//add or remove element
 	v2.push_back(1); //add an element at the vector end
 	v2.pop_back();//delete an element at the vector end
-	v2.insert(v2.begin(), 999); //add an(some) elements at the specific position,position needs to be a iterator (in this example add 999 at the begining of v2 
+	v2.insert(v2.begin(), 999); //add an(some) elements at the specific position,position needs to be a iterator (in this example add 999 at the begining of v2) 
 	it = v1.begin();
 	v1.insert(it, 5, 66); //add 5 66 to the begining of v1 
 	v1.insert(v1.begin() + 1, v2.begin(), v2.end()); //add vector or array to another arrray interval{)
@@ -70,8 +76,11 @@ int main()
 	v1.resize(20); //change the size (smaller->delete end;bigger->padding 0)
 
 	//traversal
-	for (int i = 0; i < v2.size(); ++i) cout << v2[i] << endl;
-	for (auto it2 = v2.begin(); it2 != v2.end(); ++it2) cout << *it2 << endl; //by iterator
+	for (int i = 0; i < v2.size(); ++i) cout << v2[i] << endl; //
+	for (auto it2 = v2.begin(); it2 != v2.end(); ++it2) cout << *it2 << endl; //by iterator 前到後
+	//by iterator 後到前 (只用iterator的話會報錯!要用reverse iterator)
+	for (vector<int>:: reverse_iterator it = v2.rbegin(); it != v2.rend(); it ++) cout << *it << endl; 
+	
 
 	system("pause");
 	return 0;
