@@ -30,19 +30,20 @@ int main()
 	//  (3)向前迭代器(Forward Iterator):该迭代器可以在一个区间中进行读写操作，它拥有输入迭代器的所有特性和输出迭代器的部分特性，以及向前单步迭代元素的能力
 	//  (4)双向迭代器(Bidirectional Iterator):在向前迭代器的基础上增加了向后单步迭代元素的能力
 	//  (5)随机访问迭代器(Random Access Iterator):不仅综合以后4种迭代器的所有功能，还可以像指针那样进行算术计算
+	//
 	//  定義方式:
-	//  正向迭代器             容器类名::iterator  迭代器名;
-	//  常量正向迭代器          容器类名::const_iterator  迭代器名;	
-	//  反向迭代器             容器类名::reverse_iterator  迭代器名;
-	//  常量反向迭代器          容器类名::const_reverse_iterator  迭代器名;
-	
-	//  list提供的是双向迭代器
+	//  (該容器提供的)迭代器     容器类名::iterator  迭代器名;
+	//  常量正向迭代器           容器类名::const_iterator  迭代器名;	
+	//  反向迭代器              容器类名::reverse_iterator  迭代器名;
+	//  常量反向迭代器           容器类名::const_reverse_iterator  迭代器名;
+	//	
+	//  iterator的相等:The two iterators are equal only when both the iterators point to the same position.
+	//  list提供的是双向迭代器,所以list<int>::iterator iter為bidirectional的
 	*/
 
-	//iterator
-	it = v1.begin(); //a place of vector first element
-	it = v1.end();//a place of vector last+1 element (not last element)
-
+	//iterator的例子
+	it = v1.begin(); //v1.begin()為指向首端之 iterator
+	it = v1.end();//指向尾端的下一個位置的iterator
 	//get the element
 	v1[0]; //just like array
 	v1.front(); //first element 
