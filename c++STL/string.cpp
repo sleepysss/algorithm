@@ -52,6 +52,7 @@ int main()
 	//delim:它是定界字符，它告訴函數在達到該字符後停止讀取進一步的輸入。(default:'\n')
 	//If the delimiter is found, it is extracted and discarded (i.e. it is not stored and the next input operation will begin after it).
 	//当 cin 读取数据时，它会传递并忽略任何前导白色空格字符（空格、制表符或换行符）。一旦它接触到第一个非空格字符即开始阅读，当它读取到下一个空白字符时，它将停止读取
+	//return value:只要可以读到文件内容，返回值就一直是True. 如果读取失败，那么会抛出相对应的异常。
 	*/
 	getline(cin, str4); //can have space ! can continue typing
 	(cin>>store).get(); //if continue typing,we can use this method to ignore enter
