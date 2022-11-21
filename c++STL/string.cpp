@@ -15,7 +15,7 @@ int main()
 	string name[3] = { "Sleepy","Bear","qqq" };
 
 	//operator = == + > < ........
-	str1 + str2; //concatenate strings,
+	str1 + str2; //concatenate strings(串接字串)  String birthday = "Happy" + " " + "Birthday";  -> 輸出 Happy Birthday
 	str1 += str2; //string1=string1+string2
 	str4 = str1; //easy to copy
 	str4 > str1;//compare two strings character by character,if same->next char,else->by ASCII
@@ -27,12 +27,14 @@ int main()
 	str2.empty();
 
 	//some member function
-	str1.append(str2); //append str2 after str1
-	str1.append(str2, 0, 2); //append str2 range[0,2) to str1  (ie:str1:"Hello" str2:"HelloHe")
+	str1.append(str2); //(拼接)append str2 after str1 (Extends the string by appending additional characters at the end of its current value)
+	str1.append(str2, 0, 2); //append str2 range[0,2) to str1  
+	/*ex:string reptile = "catapillar"; string mammal = "whale"; 
+	     reptile.append(mammal,0,5); -> catapillarwhale*/
 	str2.erase(0,3); //delete char range: [0,3) 
 	str1.swap(str3); //str1<->str3
 	str1.clear(); //delete all char in the string
-	str1.insert(2, str3); //from st1 second char,insert str3
+	str1.insert(2, str3); //(插入)from st1 second char,insert str3   ex:string animal = "catapillar"; animal.insert(5,"****");  -> catap****illar
 	str1.find(str2); //find str2 in str1,find->return index,not find->return npos
 	str1.find(str3, 2); //find str3 in str1(start from index 2),find->return index,not find->return npos
 	//if (str1.find(str2) != string::npos) {............}
