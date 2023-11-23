@@ -10,6 +10,7 @@ int main()
 	int array[5] = { 1,2,3,4,5 };
 
 	//declare new vector
+	vector<int> v0 {3,5}; //v0{3,5}也行 2個element,C++11的初始化列表
 	vector<int> v1(3,5);  //3 element ,each element value equals 5
 	vector<int> v2(4); //4 element,each element value equals 0
 	vector<int> v3; //an empty vector 
